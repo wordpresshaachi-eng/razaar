@@ -1,0 +1,430 @@
+body {
+    background-color: black;
+}
+
+.main-navbar,
+.category-bar {
+    /* position: static; */
+    background-color: #F85606;
+}
+
+.main-navbar {
+    height: 130px !important;
+
+}
+
+
+.category-bar {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 99%;
+    box-sizing: border-box;
+}
+
+.category-items {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+.category-items:hover {
+    color: #F85606;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 5px 5px 5px 5px 5px; */
+    background-color: white;
+    border-radius: 10px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    /* gap: 10px; */
+
+    width: 100%;
+    /* position: absolute; */
+    /* right: 10px; */
+    margin-bottom: -100px;
+}
+
+.hr {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.navbar-opt {
+    flex: 1 1;
+    /* border: solid 1px; */
+    width: 30px;
+    max-height: fit-content;
+    max-width: fit-content;
+}
+
+.navbar-opt-login {
+    flex: 1 1;
+    
+    padding-top: 20px;
+    /* border: solid 1px; */
+    width: 30px;
+    max-height: fit-content;
+    max-width: fit-content;
+}
+
+.navbar-items {
+    font-size: 12px;
+    color: white;
+    padding: 0px 4px;
+}
+
+.navbar-items:hover {
+    color: #F85606;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 5px 5px 5px 5px 5px; */
+    background-color: white;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 50%;
+
+}
+
+.logo-login {
+    width: 20%;
+}
+
+.search-bar {
+    width: 350px;
+    height: 30px;
+}
+
+
+
+.btn-cart {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    width: 100%;
+}
+
+.btn-search {
+    color: white;
+    background-color: orangered;
+    width: 40px;
+    height: 36px;
+
+}
+
+.btn-search:hover {
+    color: #F85606;
+    background-color: white;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-2 {
+    flex: 1 1;
+
+    color: white;
+    /* width: 100px; */
+    height: 40px;
+    max-width: fit-content;
+    /* max-height: fit-content; */
+}
+
+.btn-2:hover {
+    color: #F85606;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 5px 5px 5px 5px 5px; */
+    background-color: white;
+    border-radius: 10px;
+}
+
+.banner {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.banner-head {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.heading {
+    flex: 1 1;
+    background-color: #F85606;
+    max-width: fit-content;
+
+}
+
+.left-btn {
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 150px;
+    top: 120px;
+}
+
+.right-btn {
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 150px;
+    top: 120px;
+}
+
+.right-btn:hover,
+.left-btn:hover {
+    color: white;
+    background-color: gray;
+}
+
+.hr-line {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.sale-products {
+    margin-top: 75px;
+}
+
+.btn-prod {
+    color: #F85606;
+    background-color: white;
+    height: 40px;
+    max-width: fit-content;
+    border: solid 1px #F85606;
+}
+
+.btn-prod:hover {
+    color: #F85606;
+    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
+    border: solid 1px #F85606;
+}
+
+.text-sale {
+    color: #F85606;
+
+}
+
+.prod {
+    width: 200px;
+    height: 250px;
+}
+
+.prod:hover {
+    cursor: pointer;
+    box-shadow: 5px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.product {
+    border: solid 1px black;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 98%;
+    box-sizing: border-box;
+}
+
+.prod-title {
+    font-size: 14px;
+}
+
+.prod-old-price {
+    font-size: 10px;
+
+}
+
+.prod-price {
+    font-size: 15px;
+    color: #F85606;
+}
+
+.category {
+    width: 200px;
+    height: 120px;
+}
+
+.category:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+.category-img {
+    width: 80px;
+    height: 60px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.category-text {
+    font-size: 14px;
+}
+
+.prod-foryou {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.prod-fy {
+    /* width: 200px; */
+    height: 250px;
+
+    margin-left: 10px;
+}
+
+.dis-per {
+    font-size: 10px;
+}
+
+.rating {
+    font-size: 12px;
+    color: rgb(212, 212, 1);
+}
+
+.card-img-top {
+    padding-top: 5px;
+    height: 140px;
+}
+
+.orders {
+    font-size: 12px;
+}
+
+.prod-fy:hover {
+    cursor: pointer;
+    box-shadow: 5px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.adv_post-card {
+    /* height: 500px; */
+}
+
+.title {
+    width: 40%;
+}
+
+.select-option,
+.price,
+.select-option2 {
+    width: 30%;
+    margin-left: -125px;
+    /* height: 100px; */
+}
+
+.select-option .form-select {
+    padding-left: 60px;
+    height: 55px;
+}
+
+.select-option2 .form-select {
+    padding-left: 150px;
+    font-size: medium;
+    /* height: 70px; */
+}
+
+
+.select-option option {
+    font-weight: 600;
+}
+
+
+.textarea {
+    width: 40%;
+}
+
+textarea.form-control.textarea {
+    height: 100px;
+    width: 100%;
+}
+
+
+.btns-main {
+    width: 50%;
+}
+
+.submit-btn,
+.cancel-btn {
+    width: 100%;
+    margin-left: -40px;
+}
+
+/* footer */
+
+.qck-nav {
+    padding-bottom: 30px;
+}
+
+.qck-bar {
+    width: 20px;
+}
+
+.qck-links {
+    color: #4141b7;
+
+}
+
+.qck-link {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4141b7;
+}
+
+.qck-link:hover {
+    text-decoration: underline;
+}
+
+.img-payment {
+    margin-left: 8px;
+    margin-bottom: 8px;
+}
+
+.footer-bar {
+    border-top: solid 1px black;
+    padding-top: 20px;
+    height: 120px;
+}
+
+.footer-head {
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footer-text {
+    margin-left: 2px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.footer-option {
+    margin-left: 15px;
+}
+
+.footer-option:hover {
+    cursor: pointer;
+    color: #4141b7;
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-left: 15px;
+}
+
+.footer-social:hover {
+    cursor: pointer;
+    color: #4141b7;
+}
+
+.copyright {
+    margin-top: 20px;
+    margin-left: 60px;
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAZAAR | Manage Reports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/public/admin/css/style.css">
+    <link rel="stylesheet" href="/public/admin/css/orders.css">
+    <link rel="shortcut icon" href="/public/images/logo.png" type="image/x-icon">
+</head>
+
+<body class="bg-light m-0 p-0">
+    <header>
+        <div class="container-fluid main-navbar pb-2">
+            <!-- <div></div> -->
+
+            <div class="row">
+                <div class="col-4 mt-3"><a href="/"><img class="logo pt-3"
+                            src="/public/images/logo-removebg-preview.png" alt="logo"></a>
+                </div>
+                <div class="col-5">
+                    <h1 class="text-center fw-bold mt-5"
+                        style="font-family: 'Arial', sans-serif; color: white; font-size: 22px;">Welcome to Admin
+                        Panel</h1>
+                </div>
+
+                <div class="row nav-bar">
+                    <div class="col-3 mt-1 navbar-opt">
+                        <a href="" class="navbar-items fw-bold text-decoration-none">USER INDEX</a>
+                    </div>
+                    <div class="col-3 mt-1 navbar-opt">
+                        <a href="" class="navbar-items fw-bold text-decoration-none">SUPPORT</a>
+                    </div>
+                    <div class="col-3 mt-1 navbar-opt">
+                        <a href="/public/login.html" class="navbar-items fw-bold text-decoration-none"><i
+                                class="fa fa-sign-in"></i>&nbsp;&nbsp; ADMIN LOGGED IN</a>
+                    </div>
+                    <div class="col-3 mt-1 navbar-opt">
+                        <a href="" class="navbar-items fw-bold text-decoration-none"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-fluid mt-2">
+            <div class="row mb-4">
+                <div class="col-3">
+                    <h1 class="text-center fw-bold mt-3"
+                        style="font-family: 'Arial', sans-serif; color: black; font-size: 22px;">Admin Options</h1>
+                    <div class="list-group">
+                        <a href="/public/admin_main/index.html" class="list-group-item list-group-item-action mainbar">
+                            <i style="color: #F85606;" class="fa fa-house"></i> &nbsp; Dashboard
+                        </a>
+                        <a href="/public/admin_main/users.html" class="list-group-item list-group-item-action mainbar">
+                            <i style="color: #F85606;" class="fa fa-users"></i> &nbsp; Manage Users
+                        </a>
+                        <a href="/public/admin_main/advertisements.html"
+                            class="list-group-item list-group-item-action mainbar">
+                            <i style="color: #F85606;" class="fa fa-rectangle-ad"></i> &nbsp; Manage Advertisements
+                        </a>
+                        <a href="/public/admin_main/country.html"
+                            class="list-group-item list-group-item-action mainbar"> <i style="color: #F85606;"
+                                class="fa fa-globe"></i>
+                            &nbsp; Manage Countries
+                        </a>
+                        <a href="/public/admin_main/reports.html"
+                            class="list-group-item list-group-item-action mainbar active"> <i class="fa fa-bug"></i>
+                            &nbsp;
+                            Reports
+                        </a>
+                        <a href="/public/admin_main/support.html"
+                            class="list-group-item list-group-item-action mainbar"> <i style="color: #F85606;"
+                                class="fa fa-headset"></i> &nbsp;
+                            Support
+                        </a>
+                        <a href="/public/admin_main/settings.html"
+                            class="list-group-item list-group-item-action mainbar"> <i style="color: #F85606;"
+                                class="fa fa-gear"></i> &nbsp;
+                            Settings
+                        </a>
+                        <a href="/public/login.html"
+                            class="list-group-item list-group-item-action text-danger mainbar">Logout &nbsp;&nbsp;<i
+                                style="color: #F85606;" class="fa fa-sign-out"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-9">
+                    <h2 class="text-center fw-bold mt-3"
+                        style="font-family: 'Arial', sans-serif; color: black; font-size: 22px;">Manage Reports</h2>
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Report List</h5>
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-primary mb-3 me-1"><i class="fa fa-plus"></i> Add New Report</button>
+                            <button class="btn btn-secondary mb-3"><i class="fa fa-download"></i> Export
+                                Reports</button>
+
+                            <table class="table table-bordered table-hover">
+                                <thead class="table-dark text-center">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Report Title</th>
+                                        <th>Generated By</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Sales Report</td>
+                                        <td>Admin</td>
+                                        <td>2023-10-01</td>
+                                        <td>Completed</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary me-2" data-bs-toggle="modal"
+                                                data-bs-target="#viewReportModal" onclick="openViewModal(0)">
+                                                <i class="fa fa-eye"></i> View
+                                            </button>
+                                            <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editReportModal" onclick="openEditModal(0)">
+                                                <i class="fa fa-edit"></i> Edit
+                                            </button>
+                                            <button class="btn btn-sm btn-danger" onclick="deleteReport(0)">
+                                                <i class="fa fa-trash"></i> Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Inventory Report</td>
+                                        <td>Manager</td>
+                                        <td>2023-09-28</td>
+                                        <td>Pending</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary me-2" data-bs-toggle="modal"
+                                                data-bs-target="#viewReportModal" onclick="openViewModal(1)">
+                                                <i class="fa fa-eye"></i> View
+                                            </button>
+                                            <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editReportModal" onclick="openEditModal(1)">
+                                                <i class="fa fa-edit"></i> Edit
+                                            </button>
+                                            <button class="btn btn-sm btn-danger" onclick="deleteReport(1)">
+                                                <i class="fa fa-trash"></i> Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- Edit Report Modal -->
+    <div class="modal fade" id="editReportModal" tabindex="-1" aria-labelledby="editReportModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editReportModalLabel">Edit Report</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="editReportId" class="form-label">Report ID</label>
+                            <input type="text" class="form-control" id="editReportId" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editReportTitle" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="editReportTitle">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editReportAuthor" class="form-label">Generated By</label>
+                            <input type="text" class="form-control" id="editReportAuthor">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editReportDate" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="editReportDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editReportStatus" class="form-label">Status</label>
+                            <select class="form-select" id="editReportStatus">
+                                <option value="Completed">Completed</option>
+                                <option value="Pending">Pending</option>
+                                <option value="In Progress">In Progress</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveChangesButton">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Report Modal -->
+    <div class="modal fade" id="viewReportModal" tabindex="-1" aria-labelledby="viewReportModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewReportModalLabel">View Report</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Report ID:</strong> <span id="viewReportId"></span></p>
+                    <p><strong>Title:</strong> <span id="viewReportTitle"></span></p>
+                    <p><strong>Generated By:</strong> <span id="viewReportAuthor"></span></p>
+                    <p><strong>Date:</strong> <span id="viewReportDate"></span></p>
+                    <p><strong>Status:</strong> <span id="viewReportStatus"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid bg-white footer-bar" id="more">
+            <div class="row">
+                <div class="col-6">
+                    <h5 class="footer-head">Razaar International</h5>
+
+                    <span class="footer-option"><img
+                            src="https://img.lazcdn.com/us/domino/1fe7d756-2469-4d8e-82b2-d5eb7cbad875_PK-84-84.png"
+                            alt="pak" width="25px">
+                        <span class="footer-text">Pakistan</span>
+                    </span>
+
+                    <span class="footer-option"><img
+                            src="https://img.lazcdn.com/us/domino/39f7f111-619f-47cd-993c-a551aaed15fd_PK-86-86.png"
+                            alt="pak" width="25px">
+                        <span class="footer-text">Nepal</span>
+                    </span>
+
+                    <span class="footer-option"><img
+                            src="https://img.lazcdn.com/us/domino/8896f696-b36f-4cb1-8576-2e86eed05046_PK-84-84.png"
+                            alt="pak" width="25px">
+                        <span class="footer-text">Mayanmar</span>
+                    </span>
+
+                    <span class="footer-option"><img
+                            src="https://img.lazcdn.com/us/domino/5536488d-c32a-44eb-8307-ed6651d907da_PK-84-84.png"
+                            alt="pak" width="25px">
+                        <span class="footer-text">Sri Lanka</span>
+                    </span>
+
+                    <span class="footer-option"><img
+                            src="https://img.lazcdn.com/us/domino/05a4ef2c-095c-407d-9295-aa45b5412de0_PK-84-84.png"
+                            alt="pak" width="25px">
+                        <span class="footer-text">Bangladesh</span>
+                    </span>
+                </div>
+
+                <div class="col-4">
+                    <h5 class="footer-head">Follow Us</h5>
+
+                    <span class="footer-social"><img
+                            src="https://img.lazcdn.com/g/tps/imgextra/i3/O1CN01Wdetn224xMIRNihao_!!6000000007457-2-tps-34-34.png"
+                            alt="pak" width="25px">
+                    </span>
+
+                    <span class="footer-social"><img
+                            src="https://img.lazcdn.com/us/domino/77ab92ab-17ae-40ce-aa8b-e8de5974939d_PK-76-76.png"
+                            alt="pak" width="25px">
+                    </span>
+
+                    <span class="footer-social"><img
+                            src="https://img.lazcdn.com/us/domino/f03a43e7-3655-4049-8c12-b1614ac2a2d4_PK-75-76.png"
+                            alt="pak" width="25px">
+                    </span>
+
+                    <span class="footer-social"><img
+                            src="https://img.lazcdn.com/us/domino/6bf9555a-40ae-466d-a756-907f70aa3461_PK-76-76.png"
+                            alt="pak" width="25px">
+                    </span>
+
+                    <span class="footer-social"><img
+                            src="https://img.lazcdn.com/us/domino/cea1aedb-aa69-44d5-bbaf-ca5901797dea_PK-76-76.png"
+                            alt="pak" width="25px">
+                    </span>
+                </div>
+
+                <div class="col">
+                    <p class="copyright">&copy; Razaar 2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/admin/js/reports.js"></script>
+    <script src="/admin/js/functions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const listGroups = document.querySelectorAll('.list-group');
+            listGroups.forEach(group => {
+                const listGroupItems = group.querySelectorAll('.list-group-item');
+                listGroupItems.forEach(item => {
+                    item.addEventListener('click', function () {
+                        listGroupItems.forEach(i => i.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

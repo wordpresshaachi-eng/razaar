@@ -1,0 +1,56 @@
+/* .table-hover:hover {
+    background-color: aquamarine !important;
+} */
+
+.table-responsive {
+    box-shadow: 10px 1px 10px 1px lightgrey;
+    /* width: 90%; */
+
+}
+
+.container {}
+
+.img-users {
+    width: 60%;
+}
+
+.image-head {
+    width: 4%;
+}
+
+
+.adduser-btn,
+.addcountry-btn {
+    width: 70%;
+
+}
+
+.btn {
+    background-color: #f85606 !important;
+    color: white !important;
+    border: 1px solid #f85606;
+}
+
+
+tbody tr:nth-child(even) .tdata {
+    background-color: lightgrey !important;
+}
+
+tbody tr:hover .tdata {
+    background-color: lightgrey !important;
+}
+
+/* .table thead th {
+    background-color: #f85606;
+} */
+
+tbody tr .tdata {
+    /* font-size: large; */
+}
+
+th {
+    color: white;
+
+}
+
+.btn:focus {}
