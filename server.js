@@ -4,8 +4,11 @@ const connectToDatabase = require("./db");
 
 const app = express();
 require('dotenv').config();
-const cors = require('cors');
-app.use(cors());
+
+const cors = require('cors');app.use(cors({
+  origin: ["https://razaar.onrender.com", "http://localhost:44000"], // allow both local and production
+  credentials: true
+}));
 
 const host = process.env.HOST;
 const port = process.env.PORT;
